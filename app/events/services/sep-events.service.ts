@@ -8,6 +8,16 @@ export class SepEventsService {
     getAllEvents(): SepEvent[] {
         return this.eventsData;
     }
+
+    getSingleEvent(id: number): SepEvent {
+        let localEvent: SepEvent = new SepEvent();
+        for (const event of this.eventsData) {
+            if (event.eventId == id) {
+                localEvent = event;
+            }
+        }
+        return localEvent;
+    }
     private eventsData: SepEvent[] = [
         {
             eventId: 1,

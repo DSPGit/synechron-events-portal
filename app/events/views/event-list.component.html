@@ -44,5 +44,5 @@
 
 <div *ngIf="selectedEvent ">
     <!--$event is the payload-->
-    <event-details [receivedEvent]="selectedEvent " (onConfirmation)="onChildConfirmation($event) "></event-details>
+    <event-details [receivedEventId]="selectedEvent.eventId" (onConfirmation)="onChildConfirmation($event) "></event-details>
 </div>
