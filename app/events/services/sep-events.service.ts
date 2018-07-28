@@ -1,12 +1,16 @@
-import { Injectable } from "@angular/core";
+import { Injectable, Inject } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
 
 import { SepEvent } from "../models/sep-event";
 
 @Injectable()
 export class SepEventsService {
 
-    getAllEvents(): SepEvent[] {
-        return this.eventsData;
+    constructor(@Inject(HttpClient) private _http: HttpClient) { }
+
+    getAllEvents(): Observable<SepEvent[]> {
+        return this._http.get<SepEvent[]>("http://localhost:9090/api/events/");
     }
 
     getSingleEvent(id: number): SepEvent {
