@@ -13,6 +13,9 @@ import { EventDetailsComponent } from "./events/components/event-details.compone
 import { FirstLetterCapitalPipe } from "./events/pipes/first-letter-capital.pipes";
 import { FilterByPipe } from "./events/pipes/filter-by.pipe";
 
+//services
+import { SepEventsService } from "./events/services/sep-events.service";
+
 @NgModule({
     imports: [BrowserModule, FormsModule],
     exports: [],
@@ -26,7 +29,8 @@ import { FilterByPipe } from "./events/pipes/filter-by.pipe";
         FirstLetterCapitalPipe,
         FilterByPipe
     ],
-    providers: [],
+    //services go in providers
+    providers: [SepEventsService],
     bootstrap: [AppComponent]
 })
 export class AppModule {
