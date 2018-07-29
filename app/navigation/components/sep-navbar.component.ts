@@ -9,7 +9,7 @@ export class SepNavbarComponent {
     constructor() { }
 
     menus: string[] = [
-        "Synechron Events",
+        "../images/Synechron-Logo.png",
         "Home",
         "Events",
         "Employees",
