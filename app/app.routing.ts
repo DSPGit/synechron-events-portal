@@ -1,44 +1,52 @@
 import { ModuleWithProviders } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
-//components
-import { SepHomeComponent } from "./home/components/sep-home.component";
-import { EmployeesListComponent } from "./employees/components/employees-list.component";
-import { EmployeeDetailsComponent } from "./employees/components/employee-details.component";
-import { EventsListComponent } from "./events/components/event-list.component";
-import { EventDetailsComponent } from "./events/components/event-details.component";
-import { JphPostsListComponent } from "./jph/components/jph-posts-list.component";
+//default router
+const defaultRoute: Routes = [
+    {
+        path: '',
+        loadChildren: './home/home.module#HomeModule'
+    }
+];
+
+//home router
+const homeRoute: Routes = [
+    {
+        path: 'home',
+        loadChildren: './home/home.module#HomeModule'
+    }
+];
+
+//employee router
+const empsRoute: Routes = [
+    {
+        path: 'employees',
+        loadChildren: './employees/employees.module#EmployeesModule'
+    }
+];
+
+//event router
+const eventsRoute: Routes = [
+    {
+        path: 'events',
+        loadChildren: './events/events.module#EventsModule'
+    }
+];
+
+//jph router
+const jphRoute: Routes = [
+    {
+        path: 'jph',
+        loadChildren: './jph/jph.module#JphModule'
+    }
+];
 
 const appRoutes: Routes = [
-    {
-        path: "",
-        component: SepHomeComponent
-    },
-    {
-        path: "home",
-        component: SepHomeComponent
-    },
-    {
-        path: "employees",
-        component: EmployeesListComponent
-    },
-    {
-        path: "employees/:id",
-        component: EmployeeDetailsComponent
-    },
-    {
-        path: "events",
-        component: EventsListComponent
-    },
-    {
-        // as soon as we have a '/:' in url that becomes a param to the URL
-        path: "events/:id",
-        component: EventDetailsComponent
-    },
-    {
-        path: "jph/posts",
-        component: JphPostsListComponent
-    }
+    ...homeRoute,
+    ...empsRoute,
+    ...eventsRoute,
+    ...jphRoute,
+    ...defaultRoute
 ];
 
 export const appRouting: ModuleWithProviders = RouterModule.forRoot(appRoutes);

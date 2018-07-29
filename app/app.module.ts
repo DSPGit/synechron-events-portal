@@ -5,11 +5,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { appRouting } from "./app.routing";
 
 //modules 
-import { EmployeesModule } from "./employees/employees.module";
-import { EventsModule } from "./events/events.module";
-import { JphModule } from "./jph/jph.module";
 import { NavigationModule } from "./navigation/navigation.module";
-import { HomeModule } from "./home/home.module";
 
 //components
 import { AppComponent } from "./app.component";
@@ -19,11 +15,7 @@ import { AppComponent } from "./app.component";
 @NgModule({
     imports: [
         BrowserModule,
-        EmployeesModule,
-        EventsModule,
-        JphModule,
         NavigationModule,
-        HomeModule,
         appRouting
     ],
     exports: [],
