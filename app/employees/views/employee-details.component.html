@@ -2,31 +2,33 @@
 
 <table class="table table-hover table-striped">
     <tr>
-        <th></th>
+        <th>Employee ID</th>
         <td>{{employee.employeeId}}</td>
     </tr>
     <tr>
-        <th></th>
-        <td></td>
+        <th>Employee Name</th>
+        <td>{{employee.employeeName}}</td>
     </tr>
     <tr>
-        <th></th>
-        <td></td>
+        <th>Employee Address</th>
+        <td>{{employee.address}}</td>
     </tr>
     <tr>
-        <th></th>
-        <td></td>
+        <th>Employee City</th>
+        <td>{{employee.city}}</td>
     </tr>
     <tr>
-        <th></th>
-        <td></td>
+        <th>Email ID</th>
+        <td>{{employee.email}}</td>
     </tr>
     <tr>
-        <th></th>
-        <td></td>
+        <th>Employee Mobile</th>
+        <td>{{employee.phone}}</td>
     </tr>
     <tr>
         <th>Avatar</th>
-        <td><img [src]="employee.avatar" [alt]="employee.employeeName" [title]="employee.employeeName"></td>
+        <td>
+            <img [src]="employee.avatar" [alt]="employee.employeeName" [title]="employee.employeeName">
+        </td>
     </tr>
 </table>
