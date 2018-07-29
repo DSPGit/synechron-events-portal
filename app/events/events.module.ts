@@ -15,13 +15,17 @@ import { FilterByPipe } from './pipes/filter-by.pipe';
 //services
 import { SepEventsService } from './services/sep-events.service';
 
+//Routers
+import { eventsRouting } from './events.routing';
+
 @NgModule({
 
     imports: [
         CommonModule,
         FormsModule,
         HttpClientModule,
-        RouterModule],
+        RouterModule,
+        eventsRouting],
     exports: [EventsListComponent],
     declarations: [
         EventsListComponent,

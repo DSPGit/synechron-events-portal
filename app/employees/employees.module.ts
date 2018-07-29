@@ -5,8 +5,11 @@ import { CommonModule } from "@angular/common";
 import { EmployeesListComponent } from "./components/employees-list.component";
 import { EmployeeDetailsComponent } from "./components/employee-details.component";
 
+//Routes
+import { employeesRoutes } from "./employees.routing";
+
 @NgModule({
-    imports: [CommonModule],
+    imports: [CommonModule, employeesRoutes],
     exports: [EmployeesListComponent],
     declarations: [
         EmployeesListComponent,

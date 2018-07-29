@@ -8,10 +8,14 @@ import { JphPostsListComponent } from './components/jph-posts-list.component';
 //services
 import { JphService } from './services/jph.service';
 
+//Routers
+import { jphRouting } from './jph.routing';
+
 @NgModule({
     imports: [
         CommonModule,
-        HttpClientModule
+        HttpClientModule,
+        jphRouting
     ],
     exports: [JphPostsListComponent],
     //components, pipes and directives declarations go here
