@@ -13,12 +13,22 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let employee of synechronEmployees">
-            <td><span [innerText]="employee.employeeName"></span></td>
-            <td><span [innerText]="employee.city"></span></td>
-            <td><span [innerText]="employee.email"></span></td>
-            <td><span [innerText]="employee.phone"></span></td>
-            <td><button class="btn btn-primary" (click)="onEmployeeSelection(employee)">Show Details</button></td>
+        <tr *ngFor="let employee of employees">
+            <td>
+                <span [innerText]="employee.employeeName"></span>
+            </td>
+            <td>
+                <span [innerText]="employee.city"></span>
+            </td>
+            <td>
+                <span [innerText]="employee.email"></span>
+            </td>
+            <td>
+                <span [innerText]="employee.phone"></span>
+            </td>
+            <td>
+                <button class="btn btn-primary" routerLink="/employees/{{employee.employeeId}}">Show Details</button>
+            </td>
         </tr>
     </tbody>
 </table>
