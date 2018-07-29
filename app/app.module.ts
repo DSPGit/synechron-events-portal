@@ -1,11 +1,15 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 
+//module with providers
+import { appRouting } from "./app.routing";
+
 //modules 
 import { EmployeesModule } from "./employees/employees.module";
 import { EventsModule } from "./events/events.module";
 import { JphModule } from "./jph/jph.module";
 import { NavigationModule } from "./navigation/navigation.module";
+import { HomeModule } from "./home/home.module";
 
 //components
 import { AppComponent } from "./app.component";
@@ -18,7 +22,9 @@ import { AppComponent } from "./app.component";
         EmployeesModule,
         EventsModule,
         JphModule,
-        NavigationModule
+        NavigationModule,
+        HomeModule,
+        appRouting
     ],
     exports: [],
     //components, pipes and directives declarations go here
