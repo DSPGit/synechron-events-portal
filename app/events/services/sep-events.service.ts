@@ -23,6 +23,10 @@ export class SepEventsService {
         // return localEvent;
         return this._http.get<SepEvent>("http://localhost:9090/api/events/" + id);
     }
+
+    registerNewEvent(event: Event): Observable<string> {
+        return this._http.post<string>("http://localhost:9090/api/events", event);
+    }
     private eventsData: SepEvent[] = [
         {
             eventId: 1,

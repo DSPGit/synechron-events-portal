@@ -13,7 +13,8 @@ export class SepNavbarComponent {
         "Home",
         "Events",
         "Employees",
-        "Jph Posts"
+        "Jph Posts",
+        "New Event"
     ]
 
 }

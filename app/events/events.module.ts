@@ -7,6 +7,7 @@ import { RouterModule } from '../../node_modules/@angular/router';
 //components
 import { EventsListComponent } from './components/event-list.component';
 import { EventDetailsComponent } from './components/event-details.component';
+import { NewEventComponent } from './components/new-event.component';
 
 //pipes
 import { FirstLetterCapitalPipe } from './pipes/first-letter-capital.pipes';
@@ -32,7 +33,8 @@ import { eventsRouting } from './events.routing';
         EventsListComponent,
         EventDetailsComponent,
         FirstLetterCapitalPipe,
-        FilterByPipe
+        FilterByPipe,
+        NewEventComponent
     ],
     providers: [SepEventsService],
 })
