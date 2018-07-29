@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from "@angular/common";
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '../../node_modules/@angular/router';
 
 //components
 import { EventsListComponent } from './components/event-list.component';
@@ -15,7 +16,12 @@ import { FilterByPipe } from './pipes/filter-by.pipe';
 import { SepEventsService } from './services/sep-events.service';
 
 @NgModule({
-    imports: [CommonModule, FormsModule, HttpClientModule],
+
+    imports: [
+        CommonModule,
+        FormsModule,
+        HttpClientModule,
+        RouterModule],
     exports: [EventsListComponent],
     declarations: [
         EventsListComponent,

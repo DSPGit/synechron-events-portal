@@ -36,7 +36,8 @@
                 <span [innerText]="event.fees | currency: 'INR' "></span>
             </td>
             <td>
-                <button class="btn btn-success " (click)="onEventSelection(event) ">Show details</button>
+                <!-- <button class="btn btn-success " (click)="onEventSelection(event) ">Show details</button> -->
+                <button class="btn btn-success " routerLink="/events/{{event.eventId}}">Show details</button>
             </td>
         </tr>
     </tbody>
