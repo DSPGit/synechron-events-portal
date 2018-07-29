@@ -21,7 +21,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let event of events | eventsFilter:searchChar">
+        <tr *ngFor="let event of events | employeesFilter:searchChar">
             <td>
                 <!--here we have used pipes : inbuild pipes from angular framework for eg. lowercase, uppercase, etc-->
                 <span [innerText]="event.eventCode | lowercase "></span>

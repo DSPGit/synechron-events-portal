@@ -11,13 +11,17 @@ import { employeesRoutes } from "./employees.routing";
 
 //service
 import { SepEmployeesService } from "./services/sep-employees.service";
+//pipes
+import { FilterByPipe } from "./pipes/filter-by.pipe";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
-    imports: [CommonModule, employeesRoutes, HttpClientModule],
+    imports: [CommonModule, employeesRoutes, HttpClientModule, FormsModule],
     exports: [EmployeesListComponent],
     declarations: [
         EmployeesListComponent,
-        EmployeeDetailsComponent],
+        EmployeeDetailsComponent,
+        FilterByPipe],
     providers: [SepEmployeesService]
 })
 export class EmployeesModule {
