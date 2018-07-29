@@ -5,6 +5,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { EmployeesModule } from "./employees/employees.module";
 import { EventsModule } from "./events/events.module";
 import { JphModule } from "./jph/jph.module";
+import { NavigationModule } from "./navigation/navigation.module";
 
 //components
 import { AppComponent } from "./app.component";
@@ -16,7 +17,8 @@ import { AppComponent } from "./app.component";
         BrowserModule,
         EmployeesModule,
         EventsModule,
-        JphModule
+        JphModule,
+        NavigationModule
     ],
     exports: [],
     //components, pipes and directives declarations go here
